@@ -177,6 +177,8 @@ justify-content: flex-start;
         padding: 10px;
         justify-content: space-between;
         color: white;
+        
+        
 
         .logo {
           font-weight: bold;
@@ -265,6 +267,22 @@ justify-content: flex-start;
 
     .chat {
       flex: 2;
+
+
+      .popup {
+        position: fixed;
+        top: 25%;
+        left: 55%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        color: black;
+        width: 400px;
+        height: 300px;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        z-index: 999;
+        /* Add more styling as needed */
+      }
 
       .chatInfo {
         height: 50px;

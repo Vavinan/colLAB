@@ -26,6 +26,10 @@ const handleSelect = (u)=>{
     type:"CHANGE_USER",
     payload: u,
   })
+  dispatch({
+    type:"TOGGLE_INPUT",
+    payload:true,
+  })
 }
 return (
   <div className='chats'>

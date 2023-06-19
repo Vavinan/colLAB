@@ -2,9 +2,9 @@ import React, { useContext, useState } from 'react';
 import { auth } from '../firebase';
 import { AuthContext } from '../context/AuthContext';
 
-
 const Navbar = () => {
   const { currentUser } = useContext(AuthContext);
+
 
   const handleSignOut = () => {
     auth
@@ -18,6 +18,7 @@ const Navbar = () => {
       });
   };
 
+
   return (
     <div className='navbar'>
       <span className='logo'>CHAT</span>
@@ -28,6 +29,7 @@ const Navbar = () => {
           <button onClick={handleSignOut}>logout</button>
         </div>
       )}
+
 
     </div>
   );

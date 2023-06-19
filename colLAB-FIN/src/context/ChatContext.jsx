@@ -11,17 +11,25 @@ export const ChatContextProvider = ({children}) =>{
     const INITIAL_STATE={
         chatId:"null",
         user:{},
+        showInput: false, 
+
     };
 
     const chatReducer = (state,action)=>{
         switch(action.type){
              case "CHANGE_USER":
                 return{
+                    ...state,
                     user:action.payload,
                     chatId: currentUser && currentUser.uid > action.payload.uid ?
                     currentUser.uid + action.payload.uid :
                     action.payload.uid + currentUser.uid,
                 };
+                case 'TOGGLE_INPUT':
+                return {
+                    ...state,
+                 showInput: action.payload,
+      };
              default:
                 return state;
         }

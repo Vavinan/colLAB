@@ -68,7 +68,10 @@ const Search = () => {
         type: "CHANGE_USER",
         payload: user,
       });
-  
+      dispatch({
+        type:"TOGGLE_INPUT",
+        payload:true,
+      })
       setUser(null);
       setUsername("");
     }
